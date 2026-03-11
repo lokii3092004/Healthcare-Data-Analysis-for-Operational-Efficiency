@@ -1,21 +1,132 @@
-MIT License
+# 🏥 Hospital Operations Efficiency Analysis
 
-Copyright (c) 2025 Aditya Sharma
+## 1️⃣ Project Overview
+This project analyzes hospital operations to understand resource utilization and identify operational bottlenecks. Using Python for data cleaning, SQL for analysis, and Power BI for visualization, raw hospital data is transformed into actionable insights.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+---
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## 2️⃣ Problem Statement
+Hospitals manage a large number of patients daily. Inefficient use of resources such as beds, staff, and time can lead to overcrowding, longer stays, and poor service.  
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+**Key Question:**  
+How efficiently is a hospital utilizing its resources, and where are operational bottlenecks occurring?
+
+---
+
+## 3️⃣ Project Goals
+- Understand patient admissions and treatments  
+- Analyze patient length of stay  
+- Identify inefficiencies in hospital operations  
+- Present insights in clear visual dashboards  
+
+---
+
+## 4️⃣ Dataset Overview
+
+This project uses **two hospital datasets**:
+
+| Dataset | Key Columns / Information |
+|---------|--------------------------|
+| **hospital_admissions.csv** | Name, Age, Gender, Blood Type, Medical Condition, Admission Date, Doctor, Hospital, Discharge Date, and other relevant admission details |
+| **patient_stays.csv** | Patient ID, Name, Age, Arrival Date, Departure Date, Service, Satisfaction, and other stay-related details |
+
+**Folder Structure for Datasets:**
+- Raw datasets: `raw_data/`  
+- Cleaned datasets: `cleaned_data/`  
+
+These datasets are used together to analyze hospital operations, patient stay patterns, and identify operational bottlenecks.
+
+---
+
+## 5️⃣ Project Workflow
+
+### Step 1: Understanding the Problem
+- Analyze the problem statement  
+- Identify key questions and metrics (admissions, stay duration, efficiency)  
+
+### Step 2: Collecting Raw Data
+- Raw datasets stored in `raw_data/`  
+- Data may contain missing values, duplicates, and formatting issues  
+
+### Step 3: Data Cleaning with Python
+- Cleaning tasks include:
+  - Handling missing values
+  - Correcting data types
+  - Removing duplicates
+  - Standardizing column names  
+- Jupyter Notebooks:
+  - `01_patient_stays_cleaning.ipynb`
+  - `02_hospital_admissions_cleaning.ipynb`  
+- Cleaned datasets saved in `cleaned_data/`  
+
+### Step 4: Data Analysis Using SQL
+- SQL queries analyze operational patterns such as:
+  - Patient length of stay
+  - Admission trends
+  - High operational load areas  
+- SQL file: `hospital_operations_analysis.sql`  
+
+### Step 5: Data Visualization with Power BI
+- Dashboards visualize:
+  - Admission trends
+  - Length of stay patterns
+  - Operational bottlenecks  
+- Power BI dashboard exported as PDF (stored in `reports/`)  
+- **Dashboard screenshot** stored in `assets/dashboard.png` and displayed below:
+
+![Hospital Operations Dashboard](assets/dashboard.png)
+
+### Step 6: Interpreting Insights
+- Combine SQL results and dashboard visuals  
+- Identify inefficiencies and document actionable insights  
+
+---
+
+## 6️⃣ Project Folder Structure
+```
+hospital-operations-efficiency-analysis/
+│
+├── raw_data/ # Original hospital datasets (hospital_admissions.csv, patient_stays.csv)
+├── cleaned_data/ # Cleaned datasets
+├── reports/ # Power BI dashboard PDF
+├── assets/ # Screenshots of dashboards
+├── sql/ # SQL queries (hospital_operations_analysis.sql)
+│
+├── 01_patient_stays_cleaning.ipynb
+├── 02_hospital_admissions_cleaning.ipynb
+├── problem_statement.txt
+├── README.md
+└── LICENSE
+```
+
+---
+
+## 7️⃣ Tools & Technologies
+- Python (Pandas, NumPy) – Data cleaning  
+- SQL – Data querying and analysis  
+- Power BI – Dashboard visualization  
+- Jupyter Notebook – Exploratory data analysis  
+- Git & GitHub – Version control  
+
+---
+
+## 8️⃣ Key Outcomes
+- Patterns in patient admissions identified  
+- Hospital stay durations analyzed  
+- Operational bottlenecks highlighted  
+- Clear dashboards built for insights  
+
+---
+
+## 9️⃣ How to Run
+1. Clone the repository  
+2. Open Jupyter Notebooks in `01_` and `02_` to review data cleaning  
+3. Review SQL queries in the `sql/` folder  
+4. View Power BI dashboard PDF in `reports/` or screenshot in `assets/`  
+
+---
+
+## 🔟 Conclusion
+This project demonstrates how data analytics can improve hospital operations, reduce bottlenecks, and support informed decision-making using Python, SQL, and Power BI.
+
+---
